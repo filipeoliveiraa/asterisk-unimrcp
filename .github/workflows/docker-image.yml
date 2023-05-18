@@ -16,6 +16,4 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       working-directory: ./docker/build-ubuntu
-      run: |
-        docker build . --file Dockerfile --tag ghcr.io/filipeoliveiraa/asterisk-unimrcp:latest
-        docker push ghcr.io/filipeoliveiraa/asterisk-unimrcp:latest
+      run: docker build . --file Dockerfile --tag ghcr.io/filipeoliveiraa/asterisk-unimrcp:latest

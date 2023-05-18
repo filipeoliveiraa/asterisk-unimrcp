@@ -18,5 +18,4 @@ jobs:
       working-directory: ./docker/build-ubuntu
       run: |
         docker build . --file Dockerfile --tag ghcr.io/filipeoliveiraa/asterisk-unimrcp:latest
-        docker run ghcr.io/filipeoliveiraa/asterisk-unimrcp:latest
         docker push ghcr.io/filipeoliveiraa/asterisk-unimrcp:latest

@@ -21,3 +21,4 @@ jobs:
           project: 2m4h13kv20
           context: ./docker/build-ubuntu/
           push: true
+          tags: filipeoliveiraa/asterisk-unimrcp:latest

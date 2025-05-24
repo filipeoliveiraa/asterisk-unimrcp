@@ -8,7 +8,7 @@ The first one is using docker containers as describe bellow.
 The folders build-os_name and exec-os_name contains the Dockerfiles to build and execute
 Asterisk + unimrcp application with docker containers.
 
-You can select the Asterisk Version with argument *--build-arg ASTERISK_VER=13.18.3*
+You can select the Asterisk Version with argument *--build-arg ASTERISK_VER=21.0.0*
 in docker commands.
 
 ### Build
@@ -56,13 +56,13 @@ using the installer built above.
 ### Generate debian/RPM packages
 
 To use a recent asterisk version, specific packages should be build.
-In the folder asterisk-deb/asterisk-centos run the below command to build the packages.
+In the folder asterisk-deb or asterisk-centos run the below command to build the packages.
 
 ```bash
 ./build.sh
 ```
 
-It generates pakages for Asterisk version 18.7.1 in debian format or Asteris version 16.8
+It generates pakages for Asterisk version 21.0.0 in debian format or Asteris version 16.8
 in RPM format.
 The debian packages are generated in 'dist' folder.
 The RPM package is generated in RPMS folder.
@@ -122,13 +122,14 @@ yum install -y \
 
 ### Install asterisk
 
-#### In Ubuntu 18.04
+#### In Ubuntu 22.04
 
 ```bash
-dpkg -i asterisk-modules_18.7.1-0cpqd1+ubu18.04_amd64.deb
-dpkg -i asterisk-config_18.7.1-0cpqd1+ubu18.04_all.deb
-dpkg -i asterisk_18.7.1-0cpqd1+ubu18.04_amd64.deb
-dpkg -i asterisk-extra-sounds_18.7.1-0cpqd1+ubu18.04_all.deb
+dpkg -i asterisk-config_21.0.0-0cpqd1+ubu22.04_all.deb
+dpkg -1 asterisk-extra-sounds_21.0.0-0cpqd1+ubu22.04_all.deb
+dpkg -1 asterisk-modules_21.0.0-0cpqd1+ubu22.04_amd64.deb
+dpkg -1 asterisk-modules-dbgsym_21.0.0-0cpqd1+ubu22.04_amd64.ddeb
+dpkg -1 asterisk_21.0.0-0cpqd1+ubu22.04_amd64.deb
 ```
 
 #### In Centos 7.8
